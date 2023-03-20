@@ -16,7 +16,11 @@
       {
         "command": "my_extension.helloWorld",
         "title": "Hello World"
-      }
+      },
+	  {
+		"command": "my_extension.watch",
+		"title": "watch problems"
+	  }
     ]
   },
   "scripts": {
