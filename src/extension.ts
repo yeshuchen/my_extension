@@ -10,7 +10,6 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposable);
 	let juansee = vscode.commands.registerCommand("my_extension.watch", () => {
 		vscode.window.createWebviewPanel("viewer","卷题列表",vscode.ViewColumn.Two);
-		vscode.MarkdownString
 	});
 	context.subscriptions.push(juansee);
 }
