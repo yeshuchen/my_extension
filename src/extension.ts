@@ -18,7 +18,19 @@ export function activate(context: vscode.ExtensionContext) {
 		  {} // 配置选项
 		);
 		// 在窗格中输出Hello!
-		panel.webview.html = `<h1>Hello!</h1>`;
+		// panel.webview.html = `<h1>Hello!</h1>`;
+		const random = Math.floor(Math.random() * 100);
+		panel.webview.html = `
+		  <h1>${random}</h1>
+		  <button id="myButton">Click me</button>
+		  <script>
+			const button = document.getElementById('myButton');
+			button.addEventListener('click', () => {
+			  alert('Button clicked!');
+			});
+		  </script>
+		`;
+
     });
 	context.subscriptions.push(juansee);
 }
